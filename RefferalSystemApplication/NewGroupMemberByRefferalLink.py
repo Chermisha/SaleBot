@@ -59,7 +59,7 @@ def handle (params):
             except:
                 cursor.close()
                 connection.commit()
-                connection.close()
+                connection.close() 
                 res = {"res":"there aren't refery with this link"}
                 return json.dumps(res)
         else:
@@ -96,6 +96,7 @@ def handle (params):
 
     res = {"res":result, "refery_id_tg": ref}
     return json.dumps(res)
+
 
 #s = '{"db_setting": {"db_user":"chermisha2","db_password":"Ck2ABSXRPJT$GPVJ", "db_host":"FVH1.spaceweb.ru", "db_database":"chermisha2"}, "bot_params": {"id_tg":12314, "tg_username":"#{tg_username}", "tg_full_name":"#{tg_full_name}", "refery_link":"https://t.me/+vONuEALlBwdiYTMy", "time_of_entry":"23.02.2042 23:42"}}'
 #print(handle(s))
